@@ -6,7 +6,7 @@ import Chai from './Chai.jsx'
 const cold = ReactDOM.createRoot(document.getElementById('con'))
 cold.render(
   <>
-  <Chai/>
+    <Chai />
     <App />
-    </>
+  </>
 )

@@ -8,7 +8,6 @@ function App() {
     <>
     <Avi/>
     <h1>chai aur code with vite + react  | arvind jadhav </h1>
-
     </>
   )
 }

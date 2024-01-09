@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom react dom </title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+
+
+
+
+
+
+
+
+    <script  src="./customReact.js"></script>
+    <script>
+
+
+        function custonmRender(reactElement, conatainer) {
+
+            const domElement = document.createElement(reactElement.type)
+
+            domElement.innerHTML = reactElement.children
+            for (const prop in reactElement.props) {
+                if (prop === 'children')continue;
+                domElement.setAttribute(prop,
+                    reactElement.props[prop])
+            }
+
+
+
+            conatainer.appendChild(domElement)
+        }
+        const reactElement = {
+            type: 'a',
+
+            props: {
+                href: 'https://google.com',
+                target: '_blank'
+
+            },
+            children: 'the goole visit'
+
+        }
+        const maincontainer = document.querySelector("#root")
+
+
+        custonmRender(reactElement, maincontainer)
+    </script>
+</body>
+
+</html>
