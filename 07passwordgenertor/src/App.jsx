@@ -41,22 +41,13 @@ const copypassword =useCallback(()=>{
 window.navigator.clipboard.writeText(password)
 
 },[password])
-  
-
-
-
   useEffect(() => {
     passwordGenerator()
   }, [length, number, char, setPassword,passwordGenerator])
-
-
   return (
-
-
     <div className='w-full max-w-md mx-auto  shadow-md rounded-md px-4 my-8 text-orange-500 bg-gray-800'>
       <h1 className='text-white text-center my-3'>password Generator</h1>
       <div className="flex shadow rounded-lg overflow-hidden mt-4 ">
-
         <input
           type="text"
           value={password}
